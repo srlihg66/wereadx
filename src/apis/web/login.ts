@@ -36,7 +36,7 @@ export async function web_login_weblogin(info: Record<string, any> = {}) {
   delete info.expireMode;
   delete info.pf;
 
-  info.fp = "";
+  info.pf = "";
   const resp = await postJSON("https://weread.qq.com/web/login/weblogin", info);
   return resp.json();
 }
